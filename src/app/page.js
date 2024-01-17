@@ -48,6 +48,14 @@ export default function Home() {
       {/* Navigating in NextJS */}
       <h3>Navigating in Next JS</h3>
       <button onClick={()=>router.push('/about')}>About button</button>
+
+      {/* Example of Nested routes */}
+      <h3>Example of Nested routes using Link</h3>
+      <Link href="/about/aboutStudent">About Student page link</Link>
+      
+      <h3>Example of Nested routes using navigation</h3>
+      <button onClick={()=>router.push('/about/aboutStudent')}> About Student page button</button>
+
     </main>
   )
 }
