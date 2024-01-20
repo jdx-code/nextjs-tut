@@ -52,9 +52,11 @@ export default function Home() {
       {/* Example of Nested routes */}
       <h3>Example of Nested routes using Link</h3>
       <Link href="/about/aboutStudent">About Student page link</Link>
+      <Link href="/about/aboutTeacher">About Teacher page link</Link>
       
       <h3>Example of Nested routes using navigation</h3>
       <button onClick={()=>router.push('/about/aboutStudent')}> About Student page button</button>
+      <button onClick={()=>router.push('/about/aboutTeacher')}> About Teacher page button</button>
 
     </main>
   )
