@@ -62,6 +62,9 @@ export default function Home() {
       <button onClick={()=>router.push('/login')}> For Layout Example Click here (1)</button>
       <button onClick={()=>router.push('/about')}> For Layout Example Click here (2)</button>
 
+      {/* To see examples of dynamic routing */}
+      <button onClick={()=>router.push('/studentlist')}> For Dynamic Routing Example Click here </button>
+
     </main>
   )
 }
