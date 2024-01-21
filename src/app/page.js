@@ -58,6 +58,10 @@ export default function Home() {
       <button onClick={()=>router.push('/about/aboutStudent')}> About Student page button</button>
       <button onClick={()=>router.push('/about/aboutTeacher')}> About Teacher page button</button>
 
+      {/* To see examples of layouts and conditional layouts */}
+      <button onClick={()=>router.push('/login')}> For Layout Example Click here (1)</button>
+      <button onClick={()=>router.push('/about')}> For Layout Example Click here (2)</button>
+
     </main>
   )
 }
