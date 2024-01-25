@@ -70,6 +70,10 @@ export default function Home() {
 
       {/* API Example */}
       <Link href="/api/productslist">API Example 1</Link>
+
+      {/* API Example calling API from server component */}
+      <Link href="/api/productslistserver">API Example 2 (Server-side component)</Link>
+
     </main>
   )
 }
