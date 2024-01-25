@@ -68,6 +68,8 @@ export default function Home() {
       {/* To see examples of segments */}
       <button onClick={()=>router.push('/study')}> For Segments Example Click here </button>
 
+      {/* API Example */}
+      <Link href="/api/productslist">API Example 1</Link>
     </main>
   )
 }
