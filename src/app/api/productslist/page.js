@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
+import ProductPrice from "./productPrice"
 
 export default function ProductsList (){
 
@@ -24,8 +25,12 @@ export default function ProductsList (){
             <h1>API example with useEffect and useState</h1>
             <h1>Products List : </h1>
             {product.map((item) => (
-                <h4>{item.title}</h4>
+                <div>
+                    <h4>{item.title}</h4>
+                    <ProductPrice price={item.price}/>
+                </div>
             ))}
+            
         </div>
         
     )
