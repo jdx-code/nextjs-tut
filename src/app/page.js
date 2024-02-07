@@ -4,12 +4,17 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import styles from './page.module.css'
+import custom from './custom.module.css'
+import other from './other.module.css'
+import conditionalstyle from './conditionalstyle.module.css'
 
 export default function Home() {
 
   const router = useRouter();
 
   const [name, setName] = useState("Jyotirmoy")
+
+  const [myColor, setMyColor] = useState("blue")
 
   // Example showing a function without any parameter
   const fruit = () => {
@@ -73,6 +78,19 @@ export default function Home() {
 
       {/* API Example calling API from server component */}
       <Link href="/api/productslistserver">API Example 2 (Server-side component)</Link>
+
+      {/* CSS Modules Examples */}
+      <h1 className={custom.main}>Implemented modular CSS. Imported custom from custom.module.css</h1>
+
+      <h2 className={other.main}>Implemented modular CSS. Imported custom from other.module.css</h2>
+
+      <h3 className={ myColor=="blue" ? conditionalstyle.blue : conditionalstyle.violet }>Implemented modular CSS. Imported custom from other.module.css</h3>      
+
+      <button onClick={() => setMyColor("violet")}>Update color</button>
+
+      <h1 style={{ backgroundColor : myColor=='blue' ? 'blue' : 'violet' }}>Using style attribute</h1>
+
+      <h2 id={custom.gray}> Using ID </h2>
 
     </main>
   )
